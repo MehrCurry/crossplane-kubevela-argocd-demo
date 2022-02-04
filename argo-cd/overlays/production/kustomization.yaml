@@ -13,4 +13,5 @@ patches:
 patchesStrategicMerge:
 - server.yaml
 - repo-server.yaml
+- argocd-cm.yaml
 namespace: argocd
