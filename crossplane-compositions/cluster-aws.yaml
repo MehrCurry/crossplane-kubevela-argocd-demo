@@ -374,3 +374,33 @@ spec:
     patches:
     - fromFieldPath: spec.id
       toFieldPath: spec.providerConfigRef.name
+  - name: kyverno
+    base:
+      apiVersion: helm.crossplane.io/v1beta1
+      kind: Release
+      spec:
+        rollbackLimit: 3
+        forProvider:
+          namespace: kyverno
+          chart:
+            name: kyverno
+            repository: https://kyverno.github.io/kyverno/
+            version: "2.2.0"
+    patches:
+    - fromFieldPath: spec.id
+      toFieldPath: spec.providerConfigRef.name
+  - name: kyverno-policies
+    base:
+      apiVersion: helm.crossplane.io/v1beta1
+      kind: Release
+      spec:
+        rollbackLimit: 3
+        forProvider:
+          namespace: kyverno
+          chart:
+            name: kyverno-policies
+            repository: https://kyverno.github.io/kyverno/
+            version: "2.2.0"
+    patches:
+    - fromFieldPath: spec.id
+      toFieldPath: spec.providerConfigRef.name
