@@ -3,7 +3,7 @@ kind: CompositeCluster
 metadata:
   name: team-a
   labels:
-    cluster-owner: vfarcic
+    cluster-owner: gzockoll
 spec:
   id: team-a
   compositionRef:
@@ -11,5 +11,5 @@ spec:
   parameters:
     # Possible values small, medium, large
     nodeSize: small
-    # version: "1.20"
+    version: "1.21.9"
     # minNodeCount: 1
